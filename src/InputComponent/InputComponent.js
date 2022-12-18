@@ -4,7 +4,6 @@ import React from 'react';
 import InputColor from 'react-input-color';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
-import logo from './ferrari.png';
 
 
 const InputComponent = () =>{
@@ -68,7 +67,7 @@ const InputComponent = () =>{
     const deleteButton = (listId) => {
         const newList = [...list]
         const index = list.findIndex((list) => list.id === listId);
-        newList.splice(index);
+        newList.splice(index, 1);
 
         setList(newList);
     }
@@ -81,7 +80,7 @@ const InputComponent = () =>{
 
             <h1>Vehicle Registration</h1>
 
-            <img src={logo} alt="Logo" />
+            <img src={"ferrari.png"} alt="Logo" />
 
             </div>
 
